@@ -4,12 +4,13 @@ from dotenv import load_dotenv
 import os
 
 
-# Load environment variables from .env file
+# Carga variables de entorno desde el archivo .env
 load_dotenv()
 
-# Database connection string
+# Cadena de texto de conexión a la base de datos
 DB_URL = os.getenv("DB_URL")
 
-# Create a new SQLAlchemy engine instance
-engine = create_engine(DB_URL, pool_size=10)
+# Se crea una instancia de SQLAlchemy Engine con la URL de la base de datos
+# Se establece un tamaño de pool de conexiones y un tiempo de reciclaje
+engine = create_engine(DB_URL, pool_size=10, pool_recycle=3600, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
