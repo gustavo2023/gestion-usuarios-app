@@ -1,8 +1,8 @@
 import sys
 import os
-from sqlalchemy.sql import text  # Import text de sqlalchemy para ejecutar consultas SQL en bruto
+from sqlalchemy.sql import text  # Importar text de sqlalchemy para ejecutar consultas SQL en bruto
 
-# Añandir el directorio src al path para poder importar el módulo connection
+# Añadir el directorio src al path para poder importar el módulo connection
 sys.path.append(os.path.join(os.path.dirname(__file__), "../src"))
 
 from database.connection import SessionLocal
