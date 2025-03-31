@@ -2,7 +2,7 @@ import sys
 import os
 from rich.console import Console
 from rich.prompt import Prompt
-from rich.table import Table  # Importamos Table para mostrar datos tabulares
+from rich.table import Table 
 from services.user_service import create_user, get_all_users
 from database.connection import SessionLocal
 from contextlib import contextmanager
