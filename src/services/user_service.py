@@ -2,6 +2,10 @@ import re
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from models.user import User
+from passlib.context import CryptContext
+
+# Crea un contexto de cifrado para las contraseñas
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Valida que el email tenga un formato correcto
 # Utiliza una expresión regular para verificar el formato del email
@@ -21,10 +25,13 @@ def create_user(db: Session, nombre: str, email: str, password: str):
     if not validate_email(email):
         raise ValueError("Formato de email invalido")
     
+    hased_password = pwd_context.hash(password)  # Cifra la contraseña
+
+    # Crea un nuevo usuario con los datos proporcionados
     # Verifica si el email ya está registrado en la base de datos
     # Si ya está registrado, lanza una excepción
     try:
-        user = User(nombre=nombre, email=email, password=password)
+        user = User(nombre=nombre, email=email, password=hased_password)
         db.add(user)
         db.commit()
         db.refresh(user)
