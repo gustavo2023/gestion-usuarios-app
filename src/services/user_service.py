@@ -32,3 +32,8 @@ def create_user(db: Session, nombre: str, email: str, password: str):
     except IntegrityError:
         db.rollback()
         raise ValueError("El email ya esta registrado")
+
+# Función para obtener todos los usuarios de la base de datos
+# Recibe una sesión de base de datos y devuelve una lista de usuarios
+def get_all_users(db: Session):
+    return db.query(User).order_by(User.id).all()
