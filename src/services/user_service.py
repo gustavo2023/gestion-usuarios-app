@@ -25,6 +25,9 @@ def create_user(db: Session, nombre: str, email: str, password: str):
     if not validate_email(email):
         raise ValueError("Formato de email invalido")
     
+    if db.query(User).filter(User.email == email).first():
+        raise ValueError("El email ya está registrado")
+    
     hased_password = pwd_context.hash(password)  # Cifra la contraseña
 
     # Crea un nuevo usuario con los datos proporcionados
