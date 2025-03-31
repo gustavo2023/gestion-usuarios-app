@@ -10,6 +10,14 @@ venv/
 # Archivos generados por Python
 __pycache__/
 *.pyc
+*.pyo
 
 # Pruebas temporales (si las creaste)
 temp_tests/
+
+# Exclude egg-info directory
+*.egg-info/
+
+# Exclude build artifacts
+build/
+dist/
