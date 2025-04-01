@@ -84,4 +84,10 @@ A continuación, se muestra un video de demostración del programa en funcionami
 
 [![Ver Video](./screenshots/video_thumbnail.png)](https://drive.google.com/file/d/1CnRohmsIGHoNzJ6yvsJGJKLbNa814eeE/view?usp=drive_link)
 
+Haz clic en la imágen para ver el video
+
 ## Documentación Adicional
+
+- [Diagrama ER de la Base de Datos](docs/database_er_diagram.md)
+- [Explicación del Código](docs/code_explanation.md)
+- [Pruebas y Tests](docs/tests.md)
