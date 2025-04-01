@@ -26,7 +26,7 @@ def show_menu():
         console.print("2. Listar usuarios")
         console.print("3. Salir")
         
-        option = Prompt.ask("Seleccione una opción", choices=["1", "2", "3"])
+        option = Prompt.ask("Seleccione una opción", choices=["1", "2", "3"], show_choices=False)
         
         if option == "1":
             create_user_cli()
