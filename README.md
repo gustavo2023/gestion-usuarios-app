@@ -78,4 +78,12 @@ Este proyecto es una aplicación de línea de comandos para gestionar usuarios. 
 
 ![Registros en la Base de Datos](./screenshots/registros_base_datos.png)
 
+## Video de Demostración
+
+A continuación, se muestra un video de demostración del programa en funcionamiento:
+
+[![Ver Video](./screenshots/video_thumbnail.png)](./videos/program_demo.mkv)
+
+Haz clic en la imagen para ver el video.
+
 ## Documentación Adicional
