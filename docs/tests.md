@@ -59,10 +59,10 @@ A continuación, se describen las pruebas implementadas en el archivo `test_user
 
     - **Casos Probados:**
 
-        `"test@example.com"` → `True`
-        `"invalid-email"` → `False`
-        `"another@bad"` → `False`
-        `"missing@dotcom"` → `False`
+        - `"test@example.com"` → `True`
+        - `"invalid-email"` → `False`
+        - `"another@bad"` → `False`
+        - `"missing@dotcom"` → `False`
 
     - **Resultado Esperado:** La función identifica correctamente los correos válidos e inválidos.
 
