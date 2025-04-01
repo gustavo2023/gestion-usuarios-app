@@ -4,7 +4,7 @@ Este documento describe las funciones, métodos y clases principales de los arch
 
 ---
 
-## Archivo: `main.py`
+## Archivo: [`main.py`](../src/cli/main.py)
 
 Este archivo contiene la lógica principal de la aplicación de línea de comandos, incluyendo el menú interactivo y las funciones para crear y listar usuarios.
 
@@ -37,7 +37,7 @@ Este archivo contiene la lógica principal de la aplicación de línea de comand
 
 ---
 
-## Archivo: `user.py`
+## Archivo: [`user.py`](../src/models/user.py)
 
 Este archivo define el modelo de datos para la tabla `usuarios` en la base de datos.
 
@@ -54,7 +54,7 @@ Este archivo define el modelo de datos para la tabla `usuarios` en la base de da
 
 ---
 
-## Archivo: `connection.py`
+## Archivo: [`connection.py`](../src/database/connection.py)
 
 Este archivo configura la conexión a la base de datos utilizando SQLAlchemy.
 
@@ -75,7 +75,7 @@ Este archivo configura la conexión a la base de datos utilizando SQLAlchemy.
 
 ---
 
-## Archivo: `user_service.py`
+## Archivo: [`user_service.py`](../src/services/user_service.py)
 
 Este archivo contiene las funciones de servicio para interactuar con la base de datos relacionadas con los usuarios.
 
@@ -102,7 +102,7 @@ Este archivo contiene las funciones de servicio para interactuar con la base de 
 
 ---
 
-## Archivo: `logger.py`
+## Archivo: [`logger.py`](../src/utils/logger.py)
 
 Este archivo configura el sistema de logging para registrar eventos importantes en la aplicación.
 
