@@ -26,26 +26,26 @@ def validate_email(email: str) -> bool:
 
 @transactional
 def create_user(db: Session, nombre: str, email: str, password: str):
-    logger.info(f"Attempting to create user: {nombre} with email: {email}")
+    logger.info(f"Intentando crear un usuario: {nombre} con email: {email}")
     
     if not all([nombre, email, password]):
-        logger.error("Missing required fields for user creation")
+        logger.error("Campos vacios al crear usuario")
         raise ValueError("Todos los campos son obligatorios")
     
     if not validate_email(email):
-        logger.error(f"Invalid email format: {email}")
+        logger.error(f"Formato invalido de email: {email}")
         raise ValueError("Formato de email invalido")
     
     if db.query(User).filter(User.email == email).first():
-        logger.warning(f"Email already registered: {email}")
+        logger.warning(f"Email ya registrado: {email}")
         raise ValueError("El email ya está registrado")
     
     hashed_password = pwd_context.hash(password)
     user = User(nombre=nombre, email=email, password=hashed_password)
     db.add(user)
-    logger.info(f"User created successfully: {nombre}")
+    logger.info(f"usuario creado exitosamente: {nombre}")
     return user
 
 def get_all_users(db: Session):
-    logger.info("Fetching all users from the database")
+    logger.info("Obteniendo todos los usuarios de la base de datos")
     return db.query(User).order_by(User.id).all()
