@@ -58,3 +58,24 @@ Este proyecto es una aplicación de línea de comandos para gestionar usuarios. 
 - Opción 1: Crear usuario.
 - Opción 2: Listar usuarios.
 - Opción 3: Salir.
+
+## Capturas de Pantalla
+
+### Menú Principal
+
+![Menú Principal](./screenshots/menu_principal.png)
+
+### Crear Usuario
+
+![Crear Usuario Parte 1](./screenshots/crear_usuario_1.png)
+![Crear Usuario Parte 2](./screenshots/crear_usuario_2.png)
+
+### Listar Usuarios
+
+![Listar Usuarios](./screenshots/listar_usuarios.png)
+
+### Registros de la Base de Datos
+
+![Registros en la Base de Datos](./screenshots/registros_base_datos.png)
+
+## Documentación Adicional
