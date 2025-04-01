@@ -24,6 +24,13 @@ def transactional(func):
 def validate_email(email: str) -> bool:
     return re.match(r"[^@]+@[^@]+\.[^@]+", email) is not None
 
+def validate_name(name: str) -> bool:
+    """
+    Verifica si el nombre es válido.
+    Solo permite letras y espacios, incluyendo caracteres acentuados y la letra ñ.
+    """
+    return bool(re.match(r"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$", name))
+
 @transactional
 def create_user(db: Session, nombre: str, email: str, password: str):
     logger.info(f"Intentando crear un usuario: {nombre} con email: {email}")
@@ -31,6 +38,10 @@ def create_user(db: Session, nombre: str, email: str, password: str):
     if not all([nombre, email, password]):
         logger.error("Campos vacios al crear usuario")
         raise ValueError("Todos los campos son obligatorios")
+    
+    if not validate_name(nombre):
+        logger.error(f"Nombre inválido: {nombre}")
+        raise ValueError("El nombre solo puede contener letras y espacios")
     
     if not validate_email(email):
         logger.error(f"Formato invalido de email: {email}")

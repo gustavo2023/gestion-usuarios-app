@@ -6,6 +6,7 @@ from rich.table import Table
 from services.user_service import create_user, get_all_users
 from database.connection import SessionLocal
 from contextlib import contextmanager
+import re
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
@@ -18,6 +19,13 @@ def get_db():
         db.close()
 
 console = Console()
+
+def validate_name(name: str) -> bool:
+    """
+    Verifica si el nombre es válido.
+    Solo permite letras y espacios, incluyendo caracteres acentuados y la letra ñ.
+    """
+    return bool(re.match(r"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$", name))
 
 def show_menu():
     while True:
@@ -38,7 +46,12 @@ def show_menu():
 def create_user_cli():
     with get_db() as db:    
         try:
-            nombre = Prompt.ask("Nombre")
+            while True:
+                nombre = Prompt.ask("Nombre")
+                if validate_name(nombre):
+                    break
+                console.print("[red]El nombre solo puede contener letras y espacios. Inténtalo de nuevo.[/red]")
+            
             email = Prompt.ask("Email")
             password = Prompt.ask("Password", password=True)
             create_user(db, nombre, email, password)
