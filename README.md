@@ -25,6 +25,8 @@ Este proyecto es una aplicación de línea de comandos para gestionar usuarios. 
 - Listar usuarios en una tabla interactiva.
 - Validación de correos electrónicos y contraseñas.
 
+---
+
 ## Configuración del Proyecto
 
 **1. Clona el repositorio:**
@@ -93,6 +95,8 @@ Finalmente:
 - Opción 2: Listar usuarios.
 - Opción 3: Salir.
 
+---
+
 ## Capturas de Pantalla
 
 ### Menú Principal
@@ -119,6 +123,8 @@ A continuación, se muestra un video de demostración del programa en funcionami
 [![Ver Video](./screenshots/video_thumbnail.png)](https://drive.google.com/file/d/1CnRohmsIGHoNzJ6yvsJGJKLbNa814eeE/view?usp=drive_link)
 
 Haz clic en la imágen para ver el video
+
+---
 
 ## Documentación Adicional
 
