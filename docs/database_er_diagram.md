@@ -52,4 +52,4 @@ La base de datos contiene una tabla principal llamada `usuarios`, que almacena l
 
 ## Archivos Relacionados
 
-- [Modelo de la Tabla `usuarios`](../src/models/user.py)
+- [Modelo de Usuario](user.py)
