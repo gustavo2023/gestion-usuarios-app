@@ -2,6 +2,23 @@
 
 Este proyecto es una aplicación de línea de comandos para gestionar usuarios. Permite crear usuarios, listar usuarios y validar datos como correos electrónicos.
 
+---
+
+## Tabla de Contenidos
+
+1. [Características](#características)
+2. [Configuración del Proyecto](#configuración-del-proyecto)
+3. [Cómo Ejecutar el Proyecto](#cómo-ejecutar-el-proyecto)
+4. [Capturas de Pantalla](#capturas-de-pantalla)
+   - [Menú Principal](#menú-principal)
+   - [Crear Usuario](#crear-usuario)
+   - [Listar Usuarios](#listar-usuarios)
+   - [Registros de la Base de Datos](#registros-de-la-base-de-datos)
+5. [Video de Demostración](#video-de-demostración)
+6. [Documentación Adicional](#documentación-adicional)
+
+---
+
 ## Características
 
 - Crear usuarios con validación de datos.
@@ -33,8 +50,25 @@ Este proyecto es una aplicación de línea de comandos para gestionar usuarios. 
 
 **4. Configura la base de datos:**
 
+Los pasos son los siguientes:
+
 - Asegúrate de tener [XAMPP](https://www.apachefriends.org/) y ejecutando MySQL.
-- Crea una base de datos llamada `gestion_usuarios`.
+- Ingresa al navegador y escribe `localhost`.
+- Ingresa en `phpMyAdmin`.
+- Crea una base de datos llamada `gestion_usuarios` haciendo clic en el botón `new`.
+
+### Opción 1: Crear la base de datos desde cero
+
+1. Utiliza el [Diagrama ER](./docs/database_er_diagram.md) para crear la tabla `usuarios` con las columnas correspondientes.
+
+### Opción 2: Importar la base de datos desde un archivo .sql
+
+1. Haz clic en la pestaña `Import`.
+2. Haz clic en el botón `Choose File` y selecciona el archivo [`gestiond_usuarios.sql`](./docs/gestion_usuarios.sql) ubicado en el directorio `docs` del proyecto.
+3. Haz clic en el botón `Import` en la parte inferior de la página.
+
+Finalmente:
+
 - Configura el archivo `.env` con la URL de conexión:
 
   `DB_URL=mysql+mysqlconnector://root:@localhost:3306/gestion_usuarios`
