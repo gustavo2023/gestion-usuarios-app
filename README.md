@@ -82,8 +82,6 @@ Este proyecto es una aplicación de línea de comandos para gestionar usuarios. 
 
 A continuación, se muestra un video de demostración del programa en funcionamiento:
 
-[![Ver Video](./screenshots/video_thumbnail.png)](./videos/program_demo.mkv)
-
-Haz clic en la imagen para ver el video.
+[![Ver Video](./screenshots/video_thumbnail.png)](https://drive.google.com/file/d/1CnRohmsIGHoNzJ6yvsJGJKLbNa814eeE/view?usp=drive_link)
 
 ## Documentación Adicional
