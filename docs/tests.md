@@ -96,6 +96,6 @@ A continuación, se describen las pruebas implementadas en el archivo `test_user
 
 ## Archivos Relacionados
 
-- [Archivo de Pruebas](test_user_service.py)
-- [Archivo de Servicios](user_service.py)
-- [Modelo de Usuario](user.py)
+- [Archivo de Pruebas](../tests/test_user_service.py)
+- [Archivo de Servicios](../src/services/user_service.py)
+- [Modelo de Usuario](../src/models/user.py)
